@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+    }
+    
+    /* Remove extra left and right margins, due to padding */
+    .row {
+        margin: 0 -5px;
+        column-count: 1;
+     
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+    }
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    font-style: bold;
+}
+
+.fa {
+  padding: 8px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 5px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #151618;
+  color: white;
+}
+
+.fa-twitter {
+  background: #151618;
+  color: white;
+}
+
+.fa-github{
+    background: #151618;
+    color: #f1f1f1;
+}
+
+.w3-img{
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+   h1 {
+        text-align: center;
+    }
+
+
+    </style>
+
+    <br><br>
+    <h1><b>WELCOME TO THE BANK</b></h1>
+    <br><br><br>
+    
+    <div class="row" >
+      <div class="column">
+        <div class="card">
+          <h3><b>About me</b></h3>
+          <hr>
+          <p>Hey there!! I'm Nirali, I'm a self taught web developer and I like making fun projects which could help someone in their day to day life!!!</p>
+        </div>
+    </div>
+    
+      <div class="column">
+        <div class="card">
+          <h3><b>Why this web application?</b></h3>
+          <hr>
+          <p>I made it to complete the task given in my internship by "The Sparks Foundation (TSF)", In Web and Mobile Development #Task1</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <h3><b>Note</b></h3>
+          <hr>
+          <p>This web application does not contain any real data.The users I have taken is just dummy Data.</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <h3><b>Get in touch with me on</b></h3>
+          <hr>
+          <div>
+            <a target="_blank" href="https://www.linkedin.com/in/niralibhangale2310/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://github.com/Nirali2310"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+        </div>
+      </div>
+    </div>  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{# footer #}
+            {% block footer %}
+            <footer class=" text-center text-lg-start" style="background-color: grey;">
+                <div class="container ftr">
+                    <hr>
+                    <p class="text-center p-3 "><b>NIRALI BHANGALE Copyright	| 2021 </b></p>
+                </div>
+            </footer
+ {% endblock footer %}
+
+{% endblock content %}

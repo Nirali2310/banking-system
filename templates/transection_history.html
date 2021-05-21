@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<style>
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 80%;
+        border: 1px solid #485461;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        box-shadow: 5px 10px 15px #888888;
+        background: white;
+      }
+      
+    th, td, tr {
+        text-align: center;
+        padding: 8px;
+        border: 5px #30353b;
+        }
+      
+    tr:nth-child{
+        background-color: #f2f2f2
+        }
+
+    tr:first-child{
+        background-color: #3f4752;  
+    }
+
+    table tr:hover{  
+        background: #838586ef;
+          }
+
+    th, td {
+        border: 1px solid #485461 ;
+        box-shadow: 3px 6px 8px #888888;
+        font-size: 90%;
+    }
+
+    th {
+       border: 3px solid #485461;
+       font-weight: bold;
+       font-size: 130%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    .w3-img{
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+</style>
+
+<div style="overflow-x:auto;">
+<h1><b>Transection Table</b></h1>
+  <table>
+    <tr style="color: #f2f2f2;">
+      <th >Sr No.</th>
+      <th>From User</th>
+      <th>To User</th>
+      <th>Amount Transfered</th>
+      <th>Time</th>
+    </tr>
+    <tr>
+      {% for row in employeeleave %}
+        <tr>
+            <td>{{ row.sr_no }}</td>
+            <td>{{ row.from_user }}</td>
+            <td>{{ row.to_user }}</td>
+            <td>{{ row.amount_transfered }}</td>
+            <td>{{ row.time }}</td>
+        </tr>
+      {% endfor %}
+    </tr>
+  </table>
+</div>
+
+{% endblock content %}
